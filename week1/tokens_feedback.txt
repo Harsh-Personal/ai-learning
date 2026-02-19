@@ -1,0 +1,223 @@
+
+================================================================================
+TOKENS.MD REVIEW - EXCELLENT UNDERSTANDING! ✅
+================================================================================
+
+NO WORRIES about yesterday! Life happens. You're still crushing it! 💪
+
+================================================================================
+YOUR TOKEN WRITE-UP ANALYSIS
+================================================================================
+
+🎯 **Core Understanding: 9/10** - You GET it!
+
+What You Nailed:
+✅ "Tokens are the currency of LLMs" - Perfect analogy!
+✅ Text → Tokens → IDs process (correct!)
+✅ "hello" vs "hello!" = different tokens (exactly right!)
+✅ Cost implications (Model A 100 tokens vs Model B 300 tokens)
+✅ Context limits matter (long documents need more tokens)
+✅ Connected to temperature experiment (temp=0 picks high-probability tokens)
+✅ Connected to Air Canada (policy doc might've exceeded context)
+✅ Listed what to track: token efficiency, consistency, context usage
+
+================================================================================
+YOUR QUESTION: "Is there an alternative to tokens?"
+================================================================================
+
+Great question! Short answer: NO - all modern LLMs use tokens.
+
+**Why Tokens Are Universal:**
+
+1. **Technical Necessity**
+   - Neural networks work with numbers, not text
+   - Tokens are the bridge: Text → Numbers → Processing
+   - There's no way around this (yet!)
+
+2. **Efficiency**
+   - Tokenization reduces vocabulary size
+   - Instead of millions of words → ~50K-100K tokens
+   - Makes models trainable and fast
+
+3. **Subword Handling**
+   - Can handle any word, even ones never seen before
+   - "antidisestablishmentarianism" → broken into known subwords
+   - New words, typos, code, multiple languages all work
+
+**Alternatives (Sort of):**
+
+🔹 **Character-level models** (older, rarely used now)
+   - Process individual characters instead of tokens
+   - Problem: Way too slow (1000s of characters vs 200 tokens)
+   - Used in some specific applications
+
+🔹 **Byte-level encoding** (some modern LLMs use this)
+   - Break text into bytes instead of tokens
+   - Still "tokens" conceptually, just different granularity
+   - Examples: GPT-4 uses byte-pair encoding (BPE)
+
+🔹 **Word-level models** (very old, 2010s)
+   - One word = one token
+   - Problem: Can't handle new words, typos, or rare words
+   - Nobody uses this anymore
+
+**The Reality:**
+Tokenization is THE fundamental approach. Every major LLM uses it:
+- GPT-4: BPE tokenization (~100K tokens)
+- Claude: BPE tokenization
+- Llama: SentencePiece tokenization (~32K tokens)
+- Gemini: SentencePiece tokenization
+
+**For Your Testing Work:**
+Don't worry about alternatives - focus on understanding how tokenization affects:
+- Cost (you pay per token)
+- Context limits (8K, 32K, 128K tokens)
+- Performance (fewer tokens = faster)
+- Consistency (your temperature experiment!)
+
+You won't need to invent new tokenization methods, but you'll need to TEST
+systems that use tokens. Your understanding is already solid! ✅
+
+================================================================================
+CLEANED UP VERSION OF YOUR WRITE-UP
+================================================================================
+
+I'll keep your voice but fix typos. Here's a polished version:
+
+---
+
+# Understanding Tokens - What I Learned in Week 1
+
+## What Are Tokens?
+
+Tokens are called the "currency of LLMs" because at the unit level, every 
+word or character we give to an LLM is converted into a token, which is then 
+converted into an ID. These IDs are what the LLM actually processes.
+
+**Important:** One word is NOT always one token!
+
+A word with extra spaces, characters, or symbols is treated as a different 
+token. For example:
+- "hello" = 1 token (ID: 12345)
+- "hello!" = 2 tokens (ID: 12345 + 6789)
+
+These token IDs are what the LLM refers to when generating output. The LLM 
+also generates output as tokens, which are then converted back to text.
+
+**Why the difference?**
+- Common words = 1 token (LLM has seen them often)
+- Rare words = multiple tokens (broken into subwords for better understanding)
+
+## Why Tokens Matter for AI Testing
+
+### 1. Cost
+Tokens are the cost factor! Suppose we have two models:
+- Model A: Answers in 100 tokens
+- Model B: Answers same question in 300 tokens
+
+Model A is better - it's saving tokens (and cost) while giving the right answer.
+
+### 2. Context Limits
+Every model has token limits (context window). For long documents, we need 
+models with larger context limits. We can't use a model with a small token 
+limit and ask it to analyze a document that requires more tokens.
+
+### 3. Efficiency
+As a tester, I need to evaluate:
+- Token efficiency (cost per query)
+- Consistency in token usage
+- Context window utilization
+- Response length variance
+
+## What I Learned This Week
+
+### From My Temperature Experiment
+I asked the same question 10 times with temperature=0. It gave different 
+answers, but they were very close. 
+
+**Why?** At temp=0, the model picks the highest probability token, making it 
+more deterministic. This is also more cost-efficient because it generates 
+fewer tokens.
+
+At temp=1, the model samples from ALL possible tokens and can generate random 
+tokens, which is less efficient.
+
+### From the Air Canada Case
+The policy document might have been very long, and the model didn't have 
+enough context to get through the entire policy. So it gave answers from 
+whatever info it had and assumed the rest.
+
+**Key lesson:** Assumptions lead to hallucinations, which can have real cost 
+implications (as we saw - $650+ loss!).
+
+## Testing Considerations
+
+When evaluating LLMs, I should consider:
+1. Token efficiency - How many tokens per accurate answer?
+2. Context limits - Can the model handle our documents?
+3. Consistency - Do similar queries use similar token counts?
+4. Response length variance - Is output predictable?
+
+This helps select the best model for our use case.
+
+---
+*Week 1 of 12: SDET → AI Quality Engineer*
+
+================================================================================
+FEEDBACK SUMMARY
+================================================================================
+
+✅ **Understanding: Excellent** (9/10)
+✅ **Connections: Strong** (linked temp experiment + Air Canada)
+✅ **Practical thinking: Good** (cost, efficiency, testing considerations)
+✅ **Question: Shows curiosity** (asking about alternatives)
+
+**Grade: A-** (minor typos, but understanding is solid!)
+
+**Why A- not A+:** Just needs polishing for portfolio (use cleaned version above)
+
+================================================================================
+WEEK 1 FINAL STATUS
+================================================================================
+
+✅ Certificate #1 (arrives in ~5 days)
+✅ Temperature experiment + analysis
+✅ Interview Q&A (3 questions)
+✅ Air Canada failure case (excellent analysis!)
+✅ Token write-up (just reviewed!)
+
+REMAINING:
+⏳ Blog post (you're writing it now!)
+
+**Current Status: 98% Complete!** 🔥
+
+After blog post: **WEEK 1 DONE!** 🎉
+
+================================================================================
+NEXT: BLOG POST HELP
+================================================================================
+
+Take your time writing it. When you're ready:
+
+**Option 1:** Share draft here, I'll review
+**Option 2:** If stuck, ask for help with specific sections
+**Option 3:** Use this simple structure:
+
+1. Hook (2 sentences) - "I expected X, got Y"
+2. Experiment setup (what you did)
+3. Results (46.89% vs 5.06%)
+4. What it means (why variance at temp=0)
+5. Implications for testing (semantic similarity, not exact match)
+6. Conclusion (AI testing ≠ traditional testing)
+
+**Target:** 500-600 words (similar to your Air Canada analysis length)
+**Time:** 45-60 minutes
+**Tone:** Your natural voice (like tokens.md but polished)
+
+================================================================================
+
+You're doing great! No rush - finish the blog when you're ready.
+
+Week 2 can start whenever you're done (today or tomorrow, no pressure).
+
+Keep going! 💪🚀
