@@ -46,3 +46,13 @@ Embeddings are the bridge between human language and machine math.
 
 My company could use embeddings for semantic search across trial
 documents, finding similar protocols, and auto-categorizing QC issues.
+
+Typical cosine similarity ranges for these models:
+
+0.8+ → Very similar (often paraphrases).
+
+0.6–0.8 → Related in topic.
+
+0.3–0.6 → Loosely related, same domain/theme.
+
+<0.3 → Mostly unrelated.
