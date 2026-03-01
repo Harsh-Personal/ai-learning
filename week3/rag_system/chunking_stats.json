@@ -1,0 +1,14 @@
+{
+  "small": {
+    "count": 244,
+    "avg_length": 455
+  },
+  "medium": {
+    "count": 129,
+    "avg_length": 908
+  },
+  "large": {
+    "count": 70,
+    "avg_length": 1691
+  }
+}

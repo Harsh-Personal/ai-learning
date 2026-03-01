@@ -3,3 +3,4 @@
 .DS_Store
 .vscode
 chroma_db
+*.pkl
