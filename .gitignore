@@ -4,3 +4,6 @@
 .vscode
 chroma_db
 *.pkl
+*.pyc
+__pycache__/
+.deepeval_telemetry.txt
