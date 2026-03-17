@@ -50,12 +50,12 @@ def load_rag():
 
     retriever = vectorstore.as_retriever(
         search_type="mmr",
-        search_kwargs={"k": 5, "fetch_k": 20},
+        search_kwargs={"k": 3, "fetch_k": 20},
     )
 
     llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
-    print(f"✅ Groq LLM connected (llama-3.1-8b-instant)")
-    print(f"✅ RAG system loaded")
+    print("✅ Groq LLM connected (llama-3.1-8b-instant)")
+    print("✅ RAG system loaded")
     return retriever, llm
 
 

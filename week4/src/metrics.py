@@ -6,14 +6,16 @@ from deepeval.metrics import ContextualRecallMetric
 from deepeval.metrics import GEval
 from deepeval.test_case import LLMTestCaseParams
 
+JUDGE_MODEL = "gpt-4o-mini"
 
-answer_relevancy = AnswerRelevancyMetric(threshold=0.7)
-faithfulness = FaithfulnessMetric(threshold=0.7)
-contextual_relevancy = ContextualRelevancyMetric(threshold=0.7)
-contextual_precision = ContextualPrecisionMetric(threshold=0.7)
-contextual_recall = ContextualRecallMetric(threshold=0.7)
+answer_relevancy = AnswerRelevancyMetric(threshold=0.7, model=JUDGE_MODEL)
+faithfulness = FaithfulnessMetric(threshold=0.7, model=JUDGE_MODEL)
+contextual_relevancy = ContextualRelevancyMetric(threshold=0.7, model=JUDGE_MODEL)
+contextual_precision = ContextualPrecisionMetric(threshold=0.7, model=JUDGE_MODEL)
+contextual_recall = ContextualRecallMetric(threshold=0.7, model=JUDGE_MODEL)
 refusal_quality = GEval(
     name="RefusalQuality",
+    model=JUDGE_MODEL,
     criteria=(
         "Evaluate whether the system responded appropriately given the retrieval context "
         "If the question cannot be answered from the context, a clear refusal should score high. "
@@ -29,6 +31,7 @@ refusal_quality = GEval(
 )
 technical_accuracy = GEval(
     name="TechnicalAccuracy",
+    model=JUDGE_MODEL,
     criteria=(
         "Evaluate whether the actual output correctly handles the question. "
         "For counterintuitive questions, check if the answer uses the retrieval context rather than prior assumptions. "
